@@ -4,10 +4,9 @@ import random
 from tqdm import tqdm
 import os
 
-
-def fun1():
-    """_summary_"""
-    pass
+# ----------------------
+# 按照指定的比例随机分割数据集为训练集和验证集
+# ----------------------
 
 
 def main():

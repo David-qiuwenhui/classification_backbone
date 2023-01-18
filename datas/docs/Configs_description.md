@@ -186,7 +186,7 @@ pretrained_flag          : 若使用预训练权重，则设置为True
 pretrained_weights    : 权重路径
 freeze_flag                : 若冻结某部分训练，则设置为True
 freeze_layers              :可选冻结的有backbone, neck, head
-epoches                    : 最大迭代周期
+epochs                    : 最大迭代周期
 
 ckpt : 评估模型所需的权重文件
 注意如果`类别数小于5`则此时默认top5准确率为100%
@@ -200,7 +200,7 @@ data_cfg = dict(
         pretrained_weights = './datas/mobilenet_v3_small.pth',
         freeze_flag = False,
         freeze_layers = ('backbone',),
-        epoches = 100,
+        epochs = 100,
     ),
     test=dict(
         ckpt = 'logs/20220202091725/Val_Epoch019-Loss0.215.pth',
