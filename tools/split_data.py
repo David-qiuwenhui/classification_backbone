@@ -5,6 +5,11 @@ from tqdm import tqdm
 import os
 
 
+def fun1():
+    """_summary_"""
+    pass
+
+
 def main():
     """
     split_rate  : 测试集划分比例
