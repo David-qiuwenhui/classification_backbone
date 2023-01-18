@@ -1,0 +1,12 @@
+# ignore cache file
+__pycache__/
+
+# ingore dataset
+datasets/
+datas/datset/
+
+# ingore model weights 
+*.pth
+
+# system
+*.DS_Store
