@@ -12,14 +12,22 @@ from models.build import BuildNet
 
 def main():
     parser = ArgumentParser()
-    parser.add_argument("img", help="Image file")
-    parser.add_argument("config", help="Config file")
+    parser.add_argument(
+        "--img",
+        default="./datasets/test/daisy/105806915_a9c13e2106_n.jpg",
+        type=str,
+        help="Image file",
+    )
+    parser.add_argument(
+        "--config", default="./models/hrnet/hrnet_w32.py", type=str, help="Config file"
+    )
     parser.add_argument(
         "--classes-map", default="datas/annotations.txt", help="classes map of datasets"
     )
     parser.add_argument("--device", default="cuda", help="Device used for inference")
     parser.add_argument(
-        "--save-path", help="The path to save prediction image, default not to save."
+        "--save-path",
+        help="The path to save prediction image, default not to save.",
     )
     args = parser.parse_args()
 

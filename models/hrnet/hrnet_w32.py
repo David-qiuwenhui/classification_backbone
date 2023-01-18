@@ -49,7 +49,7 @@ data_cfg = dict(
         epochs=10,
     ),
     test=dict(
-        ckpt="",
+        ckpt="./logs/HRNet/2023-01-18-20-00-31/Train_Epoch010-Loss0.901.pth",
         metrics=["accuracy", "precision", "recall", "f1_score", "confusion"],
         metric_options=dict(topk=(1, 5), thrs=None, average_mode="none"),
     ),

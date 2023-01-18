@@ -160,7 +160,7 @@ def main():
     lr_update_func = eval(lr_config.pop("type"))(**lr_config)
 
     # 制作数据集->数据增强&预处理,详见https://www.bilibili.com/video/BV1zY4y167Ju
-    train_dataset = Mydataset(get_labels=train_datas, cfg=train_pipeline)
+    train_dataset = Mydataset(gt_labels=train_datas, cfg=train_pipeline)
     val_pipeline = copy.deepcopy(train_pipeline)
     val_dataset = Mydataset(gt_labels=val_datas, cfg=val_pipeline)
     train_loader = DataLoader(

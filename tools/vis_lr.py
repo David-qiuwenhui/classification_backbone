@@ -40,7 +40,12 @@ class SimpleModel(nn.Module):
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Visualize a Dataset Pipeline")
-    parser.add_argument("config", help="config file path")
+    parser.add_argument(
+        "--config",
+        default="./models/hrnet/hrnet_w32.py",
+        type=str,
+        help="config file path",
+    )
     parser.add_argument(
         "--dataset-size",
         type=int,
@@ -53,7 +58,10 @@ def parse_args():
     parser.add_argument("--title", type=str, help="title of figure")
     parser.add_argument("--style", type=str, default="whitegrid", help="style of plt")
     parser.add_argument(
-        "--save-path", type=Path, help="The learning rate curve plot save path"
+        "--save-path",
+        default="./img_out/visual_lr.jpg",
+        type=Path,
+        help="The learning rate curve plot save path",
     )
     parser.add_argument(
         "--window-size",
