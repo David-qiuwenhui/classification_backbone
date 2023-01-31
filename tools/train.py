@@ -37,7 +37,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Train a model")
     parser.add_argument(
         "--config",
-        default="./models/hrnet/hrnet_w32.py",
+        default="./models/repvgg/repvgg_B2g4.py",
         type=str,
         help="train config file path",
     )
@@ -137,7 +137,11 @@ def main():
     else:
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print("Initialize the weights.")
+
+    # --------------- 实例化深度卷积分类模型 --------------- #
     model = BuildNet(model_cfg)
+    # -------------------------------------------------- #
+
     # 是否加载模型预训练参数
     if not data_cfg.get("train").get("pretrained_flag"):
         model.init_weights()

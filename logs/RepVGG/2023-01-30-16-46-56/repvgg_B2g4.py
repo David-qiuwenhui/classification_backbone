@@ -2,8 +2,7 @@ model_cfg = dict(
     backbone=dict(
         type="RepVGG",
         arch="B2g4",
-        out_indices=(1, 3,),
-        # out_indices=(3,),
+        out_indices=(3,),
     ),
     neck=dict(type="GlobalAveragePooling"),
     head=dict(
